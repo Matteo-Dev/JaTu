@@ -17,6 +17,9 @@ body{
 
     overflow-x: hidden;
 }
+section{
+    line-height: 26.5px;
+}
 ::selection{
     background: #eeed75;
 }
@@ -83,6 +86,7 @@ h1{
 h2{
     margin-top: 15px;
     margin-left: 10px;
+    margin-bottom: 10px;
 
     font-size: 30px;
     font-family: "Consolas";
@@ -90,12 +94,10 @@ h2{
     color: #262730;
 }
 .underline-h2{
-    height: 10px;
+    height: 18px;
     width: 120px;
 
-    background-color: #d74634;
-
-    margin-top: -13px;
+    margin-top: -21px;
 }
 
 #contents{
