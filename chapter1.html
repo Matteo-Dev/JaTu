@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/scripts/sh-v3.0-min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://ajblk.github.io/SyntaxHighlightGenerator-v3.0/styles/shCoreEclipse.css"/>
+    
+    <title>JaTu</title>
+    <link rel="icon" href="jatu.png">
+</head>
+<body>
+    <!-- HEADLINE CONTAINER -->
+    <div id="hContainer">
+        <h1 class="hH1">Erster Blick auf die Syntax</h1>
+        <div class="hLine"></div>
+        <div class="desc">In diesem Kapitel werden die Grundbegriffe von Java erklärt und Aussicht darauf gegeben, was in den nächsten Kapiteln in genauerer Tiefe folgen wird</div>
+    
+    </div>
+
+    <!-- BODY/CONTENT CONTAINER -->
+    <div class="bContainer">
+        <!-- EINLEITUNG -->
+        <section class="s-mt" id="zero" style="padding-top: 10px">
+            <h2>Einleitung</h2>
+            <div class="underline-h2" style="width: 200px"></div>
+            <p class="nText">
+               Betrachten wir ein Java Programm, so kann es als eine Art Ansammlung von Objekten, die über Methoden miteinander "kommunizieren" angesehen werden. Um verstehen zu können, wie Java nun genau funktioniert, gehen wir nun einmal kurz auf die Begriffe Objekt, Klasse, Methode und Instanzvariable ein, die für das Verständnis essentiell sind:
+            </p>
+
+            <ul class="sList">
+                <li><strong>Objekt</strong> - Objekte besitzen Eigenschaften (In Java Attribute genannt) und Operationen. Beispiel: Ein Hund hat die Eigenschaften Farbe, Name und Rasse, und kann die Operationen Bellen, Laufen und Essen ausführen</li>
+                <li><strong>Klasse</strong> - Eine Klasse kann als Blaupause oder Template für ein Objekt angesehen werden, in der/dem die Eigenschaften und Operationen beschrieben werden, die ein Objekt ihres Typs haben wird</li>
+                <li><strong>Methode</strong> - Eine Methode ist einfach ausgedrückt eine Operation, die in einer Klasse definiert wird und später von einem Objekt der Klasse ausgeführt werden kann. Eine Klasse kann mehrere Methoden enthalten, genauso wie z.B. ein Hund mehrere Operationen ausführen kann. Um es ein wenig anders zu formulieren: In einer Methode lässt sich die Logik finden, es können Daten manipuliert werden und alle Befehle werden dort ausgeführt</li>
+            </ul>
+        </section>
+
+        <!-- DAS ERSTE BISSCHEN JAVA CODE -->
+        <section class="s-mt" id="one">
+            <h2>Das erste bisschen Java Code</h2>
+            <div class="underline-h2" style="width: 500px"></div>
+
+            <p class="nText">
+                Werfen wir nun für das erste Mal einen Blick auf richtigen Java Code, der "Hallo Welt" auf der Konsole ausgibt:
+            </p>
+            
+            <div class="code">
+                <div id="highlighterMainDiv_809809" class="syntaxhighlighter java"><div id="toolbarContainer_809809" class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td class="gutter"><div class="line number1 index0 alt2">01</div><div class="line number2 index1 alt1">02</div><div class="line number3 index2 alt2">03</div><div class="line number4 index3 alt1">04</div><div class="line number5 index4 alt2">05</div><div class="line number6 index5 alt1">06</div><div class="line number7 index6 alt2">07</div><div class="line number8 index7 alt1">08</div><div class="line number9 index8 alt2">09</div><div class="line number10 index9 alt1">10</div></td><td id="codeContainer_809809" class="code"><div id="container_809809" class="container"><div class="line number1 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">MyFirstJavaProgram {</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">/* Das erste Java Programm...</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">* ...gibt Hallo Welt auf der Konsole aus</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">*/</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String []args) {</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Hallo Welt"</code><code class="java plain">); </code><code class="java comments">// gibt Hallo Welt aus</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number10 index9 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_809809" class="displaysourcecode" >
+                public class MyFirstJavaProgram {
+
+                    /* Das erste Java Programm...
+                        * ...gibt Hallo Welt auf der Konsole aus
+                        */
+
+                    public static void main(String []args) {
+                        System.out.println("Hallo Welt"); // gibt Hallo Welt aus
+                    }
+                }
+                </pre>
+            </div>
+
+            <p class="nText">
+                Um nun "live" zu sehen, was dieser Code macht, müssen wir diesen ausführen. Hierfür sind folgende Schritte wichtig (Java muss bereits installiert und dessen PATH-Variable gesetzt sein):
+            </p>
+
+            <ul class="sList">
+                <li>Öffne einen beliebigen Texteditor und füge den Code hinzu</li>
+                <li>Speichere die Datei mit dem Namen MyFirstJavaProgram.java (WICHTIG: Überprüfe, ob die Datei wirklich die Endung <code>.java</code> hat oder mit <code>.txt</code> aufhört. Sollte letzteres der Fall sein, benenne sie so um, dass sie auf <code>.java</code> endet).</li>
+                <li>Öffne ein cmd-Fenster und navigiere über <code>cd &ltVerzeichnis&gt</code> in das Verzeichnis, in welchem du deine <code>MyFirstJavaProgram.java</code> Datei gespeichert hast (Solltest du keine Berechtigung dazu haben, ein cmd-Fenster über die Tasten Kombination Win + R aufzurufen, frag entweder den Systemadministrator nach Hilfe oder schreibe den genannten Befehl und alle folgenden getrennt durch jeweils einen Absatz (1x mal Enter drücken) und als zusätzlichen Befehl <code>pause</code> nach dem letzten aus dieser Liste in eine Datei mit der Endung <code>.bat</code> und doppelklicke diese)</li>
+                <li>Compiliere (="Den geschriebenen Java-Code für den Computer in eine für ihn verständliche Sprache umwandeln") durch den Befehl <code>javac MyFirstJavaProgram.java</code> deine Datei.</li>
+                <li>Führe nun den eben compilierten Code mit <code>java MyFirstJavaProgram</code> aus</li>
+            </ul>
+
+            <p class="nText">
+                Wenn alles richtig funktioniert hat, sollte dein cmd-Fenster nun so aussehen:
+            </p>
+
+            <div class="code-2">
+                <div id="highlighterMainDiv_170963" class="syntaxhighlighter nogutter plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td id="codeContainer_170963" class="code"><div id="container_170963" class="container"><div class="line number1 index0 alt2"><code class="plain plain">&lt;Verzeichnis&gt; javac MyFirstJavaProgram.java</code></div><div class="line number2 index1 alt1"><code class="plain plain">&lt;Verzeichnis&gt; java MyFirstJavaProgram </code></div><div class="line number3 index2 alt2"><code class="plain plain">Hello World</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_170963" class="displaysourcecode" >
+                    &lt;Verzeichnis&gt; javac MyFirstJavaProgram.java
+                    &lt;Verzeichnis&gt; java MyFirstJavaProgram 
+                    Hello World
+                </pre>
+            </div>
+
+            <p class="nText">
+                In dem Fall, dass du keine Berechtigung zum Öffnen eines cmd-Fenster über Win + R hattest, sollte dein cmd-Fenster nun so aussehen:
+            </p>
+
+            <div class="code-2">
+                <div id="highlighterMainDiv_827845" class="syntaxhighlighter nogutter plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td id="codeContainer_827845" class="code"><div id="container_827845" class="container"><div class="line number1 index0 alt2"><code class="plain plain">&lt;Verzeichnis&gt; javac MyFirstJavaProgram.java</code></div><div class="line number2 index1 alt1"><code class="plain plain">&lt;Verzeichnis&gt; java MyFirstJavaProgram </code></div><div class="line number3 index2 alt2"><code class="plain plain">Hello World</code></div><div class="line number4 index3 alt1"><code class="plain plain">&lt;Verzeichnis&gt; pause</code></div><div class="line number5 index4 alt2"><code class="plain plain">Drücken Sie eine beliebige Taste...</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                    <pre id="presourcecode_827845" class="displaysourcecode" >
+                        &lt;Verzeichnis&gt; javac MyFirstJavaProgram.java
+                        &lt;Verzeichnis&gt; java MyFirstJavaProgram 
+                        Hello World
+                        &lt;Verzeichnis&gt; pause
+                        Drücken Sie eine beliebige Taste...
+                    </pre>
+            </div>
+        </section>
+
+        <!-- GRUNDLAGEN DER JAVA SYNTAX -->
+        <section class="s-mt" id="two">
+            <h2>Die Grundlagen der Java Syntax</h2>
+            <div class="underline-h2" style="width: 535px"></div>
+
+            <p class="nText">
+                Zunächst gibt es ein paar Punkte, die man sich unbedingt im Kopf behalten sollte: 
+            </p>
+
+            <ul class="sList">
+                <li><strong>Case Sensitivity</strong> - Java ist case sensitive, was bedeutet, dass es möglich ist ein Objekt <code>name</code> und gleichzeitig ein anderes Objekt <code>Name</code> zu nennen.</li>
+                <li><strong>Klassennamen</strong> - In Java gibt es bestimmt Namenkonventionen, denen jeder Name einer Klasse und Methode folgen sollte. So gilt für den Namen einer Klasse, dass der erste Buchstabe immer groß geschrieben wird. Für den Fall, dass ein Klassenname aus mehereren Wörtern zusammengesetzt ist, greift die CamelCase-Schreibweise und jeweils der erste Buchstabe jedes Wortes wird großgeschrieben. <span class="br"> Beispiel: <code>class MyFirstJavaProgram</code></li>
+                <li><strong>Methodennamen</strong> - Auch für die Methoden gilt eine Regel: Der erste Buchstabe im Namen wird immer klein geschrieben. Der Rest des Namens folgt der CamelCase-Schreibweise. <span class="br"> Beispiel: <code>public void myMethodName</code></li>
+                <li><strong>Dateinamen</strong> - Es gilt: Klassenname = Dateiname + <code>.java</code>. Um etwas vorzugreifen: Ist in der Datei keine Klasse mit dem <code>public</code> Modifizierer vorhanden, so spielt der Name der Datei keine Rolle. <span class="br"> Beispiel: Angenommen die Klasse heißt <code>MeinKlasse</code>, so muss die Datei <code>MeineKlasse.java</code> heißen.</li>
+                <li><strong><code>public static void main(String args[]){...}</code></strong> - Jedes Java Programm startet in der <code>main()</code> Methode, womit auch in jedem Java Programm eine solche Methode vorhanden sein muss.</li>
+            </ul>
+        </section>
+
+        <!-- BEZEICHNER -->
+        <section class="s-mt" id="three">
+            <h2>Bezeichner</h2>
+            <div class="underline-h2" style="width: 200px"></div>
+
+            <p class="nText">
+                Um Dinge oder besser gesagt "Objekte" in Java idenzifizieren, das heißt immer eindeutig ansprechen zu können, werden für Variablen, Methoden, Klassen und Schnittstellen (Genaueres zu Schnittstellen in einem folgenden Kapitel) werden Bezeichner (Auch Identifizierer, engl: <em>identifier</em> genannt) vergeben. <span class="br"></span>
+                Ein Bezeichner ist ganz einfach eine Folge von Zeichen, welche Elemente aus dem Unicode-Zeichensatz sein müssen. Jedes einzelne Zeichen ist hierbei für die Identifikation wichtig (Ein Bezeichner mit 50 Zeichen muss immer mit allen 50 Zeichen korrekt angegeben werden). <span class="br"></span>
+                Jedoch gibt es auch für Bezeichner bestimmte Regeln, nach denen ihre Zeichen gewählt werden müssen. So muss ein Bezeichner ausschließlich aus Java-Buchstaben (=Alle lateinischen, griechischen und arabischen Buchstaben + noch viele weitere Zeichen aus dem Unicode-Alphabet wie €, $ und ¥) und Java-Ziffern bestehen und immer mit einem Java-Buchstaben beginnen. <span class="br"></span>
+                Obwohl die zuvorgenannten festen Regeln viele verrückte Bezeichner zulassen, sollte grundsätzlich die Programmierung mit englischen Bezeichnernamen erfolgen. <span class="br"></span>
+                Nun folgt eine Tabelle mit gültigen Bezeichnern und deren Begründung und danach dasselbe für ungültige Bezeichner.
+            </p>
+
+            <table class="eTable">
+                <tr>
+                    <th class="eTh" style="width: 200px;">Gültiger Bezeichner</th>
+                    <th class="eTh">Grund</th>
+                </tr>
+                <tr >
+                    <td class="eTd"><code>Matteo</code></td>
+                    <td class="eTd">Besteht nur aus Alphazeichen</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>_HaLLo_</code></td>
+                    <td class="eTd">Unterstriche sind erlaubt</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>BéÉN</code></td>
+                    <td class="eTd">Akzente sind erlaubt</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>Ω</code></td>
+                    <td class="eTd">Griechische Buchstaben zählen zu Java-Buchstaben</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>G€LD</code></td>
+                    <td class="eTd">Auch das Euro-Zeichen ist ein Java-Buchstabe</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>¥€$</code></td>
+                    <td class="eTd">Absurd, jedoch alles Java-Buchstaben und somit gültig</td>
+                </tr>
+            </table>
+
+            <table class="eTable">
+                <tr>
+                    <th class="eTh" style="width: 200px;">Ungültiger Bezeichner</th>
+                    <th class="eTh">Grund</th>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>2Numern</code></td>
+                    <td class="eTd">Beginnt mit einer Ziffer, muss allerdings mit einem Java-Buchstaben beginnen</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>kind alter</code></td>
+                    <td class="eTd">Leerzeichen sind nicht erlaubt</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>dead!</code></td>
+                    <td class="eTd">Viele Sonderzeichen, wie das Ausrufezeichen, sind ungültig</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>class</code></td>
+                    <td class="eTd">Ist bereits ein Schlüsselwort von Java (Mehr dazu später)</td>
+                </tr>
+                <tr>
+                    <td class="eTd"><code>_</code></td>
+                    <td class="eTd">Ein einzelner Unterstricht gehört seit Java 9 zu den reservierten Schlüsselwörtern</td>
+                </tr>
+            </table>
+
+            <p class="nText">
+                Soll ein Bezeichnername aus mehreren Wörtern zusammengesetzt werden, so wird auch hier wie bei der Benennung von Klassen und Methoden (Deren Namen auch Bezeichner sind) die CamelCase-Schreibweise empfohlen. <span class="br"></span>
+                So wird zum Beispiel aus dem ungültigen Bezeichner <code>get user input</code> der gültige Bezeichner <code>getUserInput</code>.
+            </p>
+
+            <p class="nText">
+                Um dieses Unterkapitel abschließend abzurunden, folgt nun das Code-Beispiel aus dem Unterkapitel "Das erste bisschen Java Code" von zuvor mit einer Auflistung der darin enthaltenen Bezeichner:
+            </p>
+
+            <div class="code">
+                <div id="highlighterMainDiv_809809" class="syntaxhighlighter java"><div id="toolbarContainer_809809" class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td class="gutter"><div class="line number1 index0 alt2">01</div><div class="line number2 index1 alt1">02</div><div class="line number3 index2 alt2">03</div><div class="line number4 index3 alt1">04</div><div class="line number5 index4 alt2">05</div><div class="line number6 index5 alt1">06</div><div class="line number7 index6 alt2">07</div><div class="line number8 index7 alt1">08</div><div class="line number9 index8 alt2">09</div><div class="line number10 index9 alt1">10</div></td><td id="codeContainer_809809" class="code"><div id="container_809809" class="container"><div class="line number1 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">MyFirstJavaProgram {</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">/* Das erste Java Programm...</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">* ...gibt Hallo Welt auf der Konsole aus</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">*/</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String []args) {</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Hallo Welt"</code><code class="java plain">); </code><code class="java comments">// gibt Hallo Welt aus</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number10 index9 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_809809" class="displaysourcecode" >
+                public class MyFirstJavaProgram {
+
+                    /* Das erste Java Programm...
+                        * ...gibt Hallo Welt auf der Konsole aus
+                        */
+
+                    public static void main(String []args) {
+                        System.out.println("Hallo Welt"); // gibt Hallo Welt aus
+                    }
+                }
+                </pre>
+            </div>
+
+            <p class="nText">
+                Bezeichner: <code>MyFirstJavaProgram</code>, <code>main</code>, <code>String</code> (String ist streng genommen kein Datentyp, sondern eine Klasse, auch wenn er in Java beinahe wie einer behandelt wird. Doch auch mehr hierzu später), <code>args</code>, <code>System</code>, <code>out</code> und <code>println</code>.
+            </p>
+        </section>
+
+        <!-- LITERALE -->
+        <section class="s-mt" id="four">
+            <h2>Literale</h2>
+            <div class="underline-h2" style="width: 170px"></div>
+
+            <p class="nText">
+                Konstante Ausdrücke werden als Literal bezeichnet. Dabei wird zwischen folgenden verschiedenen Typen von Literalen unterschieden:
+            </p>
+
+            <ul class="sList">
+                <li><strong>Wahrheitswerte</strong> - <code>true</code> und <code>false</code></li>
+                <li><strong>Integrale Literale für Zahlen</strong> - Zum Beispiel <code>432</code></li>
+                <li><strong>Fließkommaliterale</strong> - Zum Beispiel <code>19.45</code> oder <code>4.321E-2</code>
+                <li><strong>Zeichenliterale</strong> - Zum Beipiel <code>'A'</code> oder <code>'\n'</code></li>
+                <li><strong>String-Literale (Für Zeichenketten)</strong> - Zum Beispiel <code>"Matteo Mertz"</code></li>
+                <li><strong><code>null</code></strong> - Ein besonderer Referenztyp</li>
+            </ul>
+
+            <p class="nText">
+                Wenn wir nun noch einmal einen Blick auf das bereits verwendete Programm aus den vorherigen Unterkapiteln werfen, finden wir genau ein Literal: Das String-Literal <code>"Hallo Welt"</code>.
+            </p>
+
+            <div class="code">
+                <div id="highlighterMainDiv_809809" class="syntaxhighlighter java"><div id="toolbarContainer_809809" class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td class="gutter"><div class="line number1 index0 alt2">01</div><div class="line number2 index1 alt1">02</div><div class="line number3 index2 alt2">03</div><div class="line number4 index3 alt1">04</div><div class="line number5 index4 alt2">05</div><div class="line number6 index5 alt1">06</div><div class="line number7 index6 alt2">07</div><div class="line number8 index7 alt1">08</div><div class="line number9 index8 alt2">09</div><div class="line number10 index9 alt1">10</div></td><td id="codeContainer_809809" class="code"><div id="container_809809" class="container"><div class="line number1 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">MyFirstJavaProgram {</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">/* Das erste Java Programm...</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">* ...gibt Hallo Welt auf der Konsole aus</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">*/</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String []args) {</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Hallo Welt"</code><code class="java plain">); </code><code class="java comments">// gibt Hallo Welt aus</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number10 index9 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_809809" class="displaysourcecode" >
+                public class MyFirstJavaProgram {
+
+                    /* Das erste Java Programm...
+                        * ...gibt Hallo Welt auf der Konsole aus
+                        */
+
+                    public static void main(String []args) {
+                        System.out.println("Hallo Welt"); // gibt Hallo Welt aus
+                    }
+                }
+                </pre>
+            </div>
+        </section>
+
+        <!-- SCHLÜSSELWÖRTER -->
+        <section class="s-mt" id="five">
+            <h2>Schlüsselwörter</h2>
+            <div class="underline-h2" style="width: 285px"></div>
+
+            <p class="nText">
+                Die Programmiersprache Java an sich, bzw. ihre Logik, besteht aus für sich reservierten Schlüsselwörtern, die sich aus diesem Grund auch nicht als Bezeichnername wählen lassen. Auch der Programmierer kann keine eigenen Schlüsselwörter definieren. <span class="br"></span>
+                
+            </p>
+
+            <p class="nText">
+                Wenn wir nun noch einmal einen Blick auf das bereits verwendete Programm aus den vorherigen Unterkapiteln werfen, finden wir genau ein Literal: Das String-Literal <code>"Hallo Welt"</code>.
+            </p>
+
+            <div class="code">
+                <div id="highlighterMainDiv_809809" class="syntaxhighlighter java"><div id="toolbarContainer_809809" class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td class="gutter"><div class="line number1 index0 alt2">01</div><div class="line number2 index1 alt1">02</div><div class="line number3 index2 alt2">03</div><div class="line number4 index3 alt1">04</div><div class="line number5 index4 alt2">05</div><div class="line number6 index5 alt1">06</div><div class="line number7 index6 alt2">07</div><div class="line number8 index7 alt1">08</div><div class="line number9 index8 alt2">09</div><div class="line number10 index9 alt1">10</div></td><td id="codeContainer_809809" class="code"><div id="container_809809" class="container"><div class="line number1 index0 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">MyFirstJavaProgram {</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">/* Das erste Java Programm...</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">* ...gibt Hallo Welt auf der Konsole aus</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">*/</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String []args) {</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Hallo Welt"</code><code class="java plain">); </code><code class="java comments">// gibt Hallo Welt aus</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number10 index9 alt1"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_809809" class="displaysourcecode" >
+                public class MyFirstJavaProgram {
+
+                    /* Das erste Java Programm...
+                        * ...gibt Hallo Welt auf der Konsole aus
+                        */
+
+                    public static void main(String []args) {
+                        System.out.println("Hallo Welt"); // gibt Hallo Welt aus
+                    }
+                }
+                </pre>
+            </div>
+
+            <p class="nText">
+                In der folgenden Tabelle sind Schlüsselwörter (Im Fall von <code>true</code>, <code>false</code> und <code>null</code> Literale) aufgeführt, die demnach nicht mehr als Bezeichnernamen verwendet werden dürfen:
+            </p>
+
+            <table class="eTable">
+                <tr>
+                    <td class="eTd tSS"><code>abstract</code></td>
+                    <td class="eTd tSS"><code>continue</code></td>
+                    <td class="eTd tSS"><code>for</code></td>
+                    <td class="eTd tSS"><code>new</code></td>
+                    <td class="eTd tSS"><code>switch</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>assert</code></td>
+                    <td class="eTd tSS"><code>default</code></td>
+                    <td class="eTd tSS"><code>goto</code></td>
+                    <td class="eTd tSS"><code>package</code></td>
+                    <td class="eTd tSS"><code>synchronized</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>booelan</code></td>
+                    <td class="eTd tSS"><code>do</code></td>
+                    <td class="eTd tSS"><code>if</code></td>
+                    <td class="eTd tSS"><code>private</code></td>
+                    <td class="eTd tSS"><code>this</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>break</code></td>
+                    <td class="eTd tSS"><code>double</code></td>
+                    <td class="eTd tSS"><code>implements</code></td>
+                    <td class="eTd tSS"><code>protected</code></td>
+                    <td class="eTd tSS"><code>throw</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>byte</code></td>
+                    <td class="eTd tSS"><code>else</code></td>
+                    <td class="eTd tSS"><code>import</code></td>
+                    <td class="eTd tSS"><code>public</code></td>
+                    <td class="eTd tSS"><code>throws</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>case</code></td>
+                    <td class="eTd tSS"><code>enum</code></td>
+                    <td class="eTd tSS"><code>instanceof</code></td>
+                    <td class="eTd tSS"><code>return</code></td>
+                    <td class="eTd tSS"><code>transient</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>catch</code></td>
+                    <td class="eTd tSS"><code>extends</code></td>
+                    <td class="eTd tSS"><code>int</code></td>
+                    <td class="eTd tSS"><code>short</code></td>
+                    <td class="eTd tSS"><code>try</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>char</code></td>
+                    <td class="eTd tSS"><code>final</code></td>
+                    <td class="eTd tSS"><code>interface</code></td>
+                    <td class="eTd tSS"><code>static</code></td>
+                    <td class="eTd tSS"><code>void</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>class</code></td>
+                    <td class="eTd tSS"><code>finally</code></td>
+                    <td class="eTd tSS"><code>long</code></td>
+                    <td class="eTd tSS"><code>strictfp</code></td>
+                    <td class="eTd tSS"><code>volatile</code></td>
+                </tr>
+                <tr>
+                    <td class="eTd tSS"><code>const</code></td>
+                    <td class="eTd tSS"><code>float</code></td>
+                    <td class="eTd tSS"><code>native</code></td>
+                    <td class="eTd tSS"><code>super</code></td>
+                    <td class="eTd tSS"><code>while</code></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- KOMMENTARE -->
+        <section class="s-mt" id="six">
+            <h2>Kommentare</h2>
+            <div class="underline-h2" style="width: 205px"></div>
+
+            <p class="nText">
+                Ein fundamental wichtiger Baustein von Programmiersprachen sind Kommentare. Sie ermöglichen dem Programmierer, seine Gedanken verständlich zu formulieren, sodass auch die Nachwelt und nach einiger Zeit er selbst noch verstehen kann, was sein Code eigentlich tut. <span class="br"></span>
+                Somit dienen sie einzig und allein dem Codeverständnis des Lesers und haben keinerlei Auswirkung auf das Programm. <span class="br"></span>
+                Insgesamt gibt es drei verschiedene Möglichkeiten in Java Kommentare zu schreiben:
+            </p>
+
+            <ul class="sList">
+                <li><strong>Zeilenkommentare</strong> - Beginnen mit zwei Schrägstrichen <code>//</code> und kommentieren das, was in der Zeile nach ihnen noch kommt aus. Somit gelten sie bis zum Ende der Zeile/dem Zeilenumbruchszeichen.</li>
+                <li><strong>Blockkommentare</strong> - Kommentieren alles zwischen <code>/*</code> und <code>*/</code> aus (Wie der Name bereits vermuten lässt auch gesamte Blöcke, das heißt mehrere Zeilen). Dabei darf der Text in einem Blockkommentar selbst kein <code>*/</code> enthalten, da in Blockkommentaren keine Verschachtelung möglich ist.</li>
+                <li><strong>Javadoc-Kommentare</strong> - Sind eine besondere Art von Blockkomentaren und kommentieren alles zwischen <code>/**</code> und <code>*/</code> aus. In ihnen wird die Methode oder deren Parameter beschrieben, aus was sich später die API-Dokumentation generieren lässt.</li>
+            </ul>
+
+            <p class="nText">
+                Es folgt ein Code-Beispiel, in dem alle drei Kommentararten aufgeführt sind:
+            </p>
+
+            <div class="code">
+                <div id="highlighterMainDiv_811358" class="syntaxhighlighter java"><div id="toolbarContainer_811358" class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp;</td></tr><tr><td class="gutter"><div class="line number1 index0 alt2">01</div><div class="line number2 index1 alt1">02</div><div class="line number3 index2 alt2">03</div><div class="line number4 index3 alt1">04</div><div class="line number5 index4 alt2">05</div><div class="line number6 index5 alt1">06</div><div class="line number7 index6 alt2">07</div><div class="line number8 index7 alt1">08</div><div class="line number9 index8 alt2">09</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div></td><td id="codeContainer_811358" class="code"><div id="container_811358" class="container"><div class="line number1 index0 alt2"><code class="java comments">/*</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;</code><code class="java comments">* Dieser Quellcode wurde am 27.09.2020 geschrieben</code></div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;</code><code class="java comments">*/</code></div><div class="line number4 index3 alt1"><code class="java comments">/**</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;</code><code class="java comments">* @author Matteo</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;</code><code class="java comments">*/</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">Main { </code><code class="java comments">// TODO: Rename</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// When I wrote this only God and I understood what I was doing</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// Now, God only knows</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String[] args) {</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Hallo Welt"</code><code class="java plain">); </code><code class="java comments">// Gibt "Hallo Welt" aus</code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}&nbsp;&nbsp; </code></div><div class="line number16 index15 alt1">&nbsp;</div><div class="line number17 index16 alt2"><code class="java plain">}</code></div></div></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></div>
+
+                <pre id="presourcecode_811358" class="displaysourcecode" >
+                /*
+                * Dieser Quellcode wurde am 27.09.2020 geschrieben
+                */
+                /**
+                * @author Matteo
+                */
+
+                public class Main { // TODO: Rename
+                    
+                    // When I wrote this only God and I understood what I was doing
+                    // Now, God only knows
+
+                    public static void main(String[] args) {
+                        System.out.println("Hallo Welt"); // Gibt "Hallo Welt" aus
+                    }   
+
+                }
+                </pre>
+            </div>
+
+            
+        </section>
+    </div>
+
+    <div class="footer">
+        
+    </div>
+
+    <script type="text/javascript">SyntaxHighlighter.initialize();</script>
+</body>
+</html>

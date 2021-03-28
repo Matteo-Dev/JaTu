@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+*{
+    margin: 0;
+    font-family: "Roboto";
+
+    color: #757c89;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+::selection{
+    background: #eeed75;
+}
+
+#lContainer{
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(300deg, #d74634, #fe8568);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#bg-elem{
+    font-family: "Consolas";
+    font-size: 700px;
+    color: #ffffff11;
+
+    user-select: none;
+
+    position: absolute;
+    z-index: 0;
+}
+
+.bContainer{
+    width: 800px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+
+    font-size: 60px;
+    font-family: "Consolas";
+    font-weight: bold;
+    color: #262730;
+
+    z-index: 1;
+}
+.underline-h1{
+    height: 20px;
+    width: 500px;
+
+    background-color: #d74634;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: -25px;
+}
+
+#cContainer{
+    border: solid 2px  #757c89;
+    padding: 20px;
+
+    width: 800px;
+
+    margin-top: 20px;
+    margin-bottom: -60px;
+}
+
+h2{
+    margin-top: 15px;
+    margin-left: 10px;
+
+    font-size: 30px;
+    font-family: "Consolas";
+    font-weight: bold;
+    color: #262730;
+}
+.underline-h2{
+    height: 10px;
+    width: 120px;
+
+    background-color: #d74634;
+
+    margin-top: -13px;
+}
+
+#contents{
+    margin-top: 15px;
+}
+#contents li{
+    margin-bottom: 10px;
+    max-width: fit-content;
+
+    transition: .2s; 
+    font-weight: bolder;
+
+    list-style: square;
+}
+#contents li:hover, #contents li a:hover{
+    color: #262730;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+
+#underline-h2-1{
+    width: 520px;
+}
+
+.nText{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.sList, .hcList{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.sList li, .hcList li{
+    margin-bottom: 10px;
+    max-width: fit-content;
+
+    transition: .2s; 
+
+    list-style: square;
+}
+.code{
+    margin-left: 30px;
+}
+.code-2{
+    margin-left: 50px;
+}
+
+/* ERSTER BLICK AUF DIE SYNTAX (CHAPTER 1) */
+#underline-h1-1{
+    margin-top: -90px;
+}
+
+#hContainer{
+    height: 400px;
+    background: linear-gradient(300deg, #d74634, #fe8568);
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 1000px){
+    .hH1{
+        width: 800px;
+    }
+}
+
+.hH1{
+    margin-top: 0;
+}
+.hLine{
+    width: 200px;
+    height: 4px;
+
+    background: #262730;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    z-index: 1;
+}
+.desc{
+    color: #26273088;
+    font-weight: bold;
+    text-align: center;
+
+    max-width: 700px;
+
+    z-index: 1;
+}
+
+.s-mt{
+    padding-top: 30px;
+}
+
+code{
+    font-family: "Consolas";
+    background-color: #757c8922;
+    padding: 0px 4px 0px 4px;
+    border-radius: 4px;
+
+    transition: background-color .2s;
+}
+code:hover{
+    background-color: #eeed75;
+    cursor: pointer;
+}
+
+.footer{
+    height: 400px;
+    width: 100vw;
+
+    /*border-top: solid 12px #d74634;*/
+    background: #d74634;
+
+    margin-top: 80px;
+}
+
+.br { 
+    display: block; 
+    margin-top: 10px; 
+} 
+
+.eTable{
+    margin-top: 15px;
+    margin-left: 50px;
+
+    width: 750px;
+}
+.eTable, .eTh, .eTd{ /* = example Table*/
+    border: solid 2px #757c89;
+    border-collapse: collapse;
+    padding: 7.5px;
+}
+.eTh{
+    text-align: left;
+}
+.tSS{
+    width: 150px;
+}
